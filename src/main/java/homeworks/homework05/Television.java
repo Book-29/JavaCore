@@ -31,23 +31,37 @@ public class Television {
 
 
     }
-    public Television() {}
+
+    public Television() {
+    }
+    public Television( String model, Integer volume, Integer channel, Boolean modeOn) {
+        this.model = model;
+        this.volume = volume;
+        this.channel = channel;
+        this.modeOn = modeOn;
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
 
     }
+
     public void setModel(String model) {
         this.model = model;
     }
+
     public void setYear(int year) {
         this.year = year;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
+
     public void setPrice(int price) {
         this.price = price;
     }
+
     public void setLength(Integer length) {
         this.length = length;
     }
@@ -56,8 +70,57 @@ public class Television {
     public Integer getVolume() {
         return volume;
     }
+
     public void setVolume(Integer volume) {
-        this.volume = volume;
+        
+        this.volume = Math.min(Math.max(volume, 0), 100);
+    }
+    public void setSound(Integer sound) {
+        this.sound = sound;
+    }
+
+    public void setChannel(Integer channel) {
+        this.channel = channel;
+    }
+
+    public void setModeOn(boolean modeOn) {
+        this.modeOn = modeOn;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Integer getLength() {
+        return length;
+    }
+
+    public Integer getSound() {
+        return sound;
+    }
+
+    public Integer getChannel() {
+        return channel;
+    }
+
+    public Boolean getModeOn() {
+        return modeOn;
     }
 
     @Override
@@ -90,10 +153,4 @@ public class Television {
     }
 
 
-
-
-
-
-
-
-
+}
