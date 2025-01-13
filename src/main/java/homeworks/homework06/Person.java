@@ -9,25 +9,27 @@ import java.util.Objects;
 //Если Покупатель может позволить себе Продукт, то Продукт добавляется
 //в пакет. Если у Покупателя недостаточно денег, то добавление не происходит.
 public class Person {
-private String name;
+
+    private String name;
 private int money;
 private  Product[] basket = new Product[10];
 
 private int index = 0;
 public void addProductBasket(Product product) {
-if (this.money > product.getProductPrice()) {
-    this.basket[index] = product;
-    index++;
+    if (this.money > product.getProductPrice()) {
+        this.basket[index] = product;
+        index++;
 
-}
-else {
-    System.out.println( name + "не может позволить себе" + product);
-}
+
+    } else {
+        System.out.println(name + " не может позволить себе " + product);
+    }
 }
 
     public Person(String name, int money) {
         this.name = name;
         this.money = money;
+        this.basket = new Product[0];
 
     }
 
@@ -37,7 +39,7 @@ else {
 
     public void setName(String name) {
         if (name.isEmpty()) {
-            System.out.println("Имя не может быть пустой строкой");
+            System.out.println("Имя не может быть пустой строкой ");
         } else {
             this.name = name;
         }
@@ -49,12 +51,14 @@ else {
 
     public void setMoney(int money) {
         if (money < 0) {
-            System.out.println("Число не может быть отрицательным");
+            System.out.println("Деньги не могут быть отрицательными");
         } else {
             this.money = money;
         }
     }
-
+   public Product[] getBasket() {
+    return basket;
+   }
 
     @Override
     public boolean equals(Object o) {
