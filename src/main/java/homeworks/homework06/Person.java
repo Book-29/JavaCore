@@ -8,14 +8,16 @@ import java.util.Objects;
 //могут быть отрицательным числом.
 //Если Покупатель может позволить себе Продукт, то Продукт добавляется
 //в пакет. Если у Покупателя недостаточно денег, то добавление не происходит.
+
+
 public class Person {
 
     private String name;
-private int money;
-private  Product[] basket = new Product[10];
+    private int money;
+    private  Product[] basket = new Product[10];
 
-private int index = 0;
-public void addProductBasket(Product product) {
+    private int index = 0;
+    public void addProductBasket(Product product) {
     if (this.money > product.getProductPrice()) {
         this.basket[index] = product;
         index++;

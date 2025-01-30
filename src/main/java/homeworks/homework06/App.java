@@ -42,6 +42,7 @@ public class App {
             String firstWord = matcherProduct.group(1);
             String lastWord = matcherProduct.group(2);
             String nameProduct = firstWord + (lastWord != null ? " " + lastWord : "");
+
             int productPrice = matcherProduct.group(3) != null ? Integer.parseInt(matcherProduct.group(3)) : 0;
 
             lastProduct = new Product(nameProduct, 0);
