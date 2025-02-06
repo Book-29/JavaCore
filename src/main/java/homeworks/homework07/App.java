@@ -26,19 +26,19 @@ public class App {
             lastProduct = new Product(nameProduct, productPrice);
             discountProduct = new DiscountProduct(nameProduct, productPrice, discount);
             if (productPrice > 0) {
-                if (nameProduct != null && nameProduct.length() >= 3 && !nameProduct.matches("\\d+") && !nameProduct.equals(""))
-                {
-                    if (discount == 0){
+                if (nameProduct != null && nameProduct.length() >= 3 && !nameProduct.matches("\\d+") && !nameProduct.equals("")) {
+                    if (discount == 0) {
                         System.out.println(" Обычные продукты: " + lastProduct.getProductName());
                     } else {
-                        System.out.println(" Акционные продукты: " + discountProduct.getProductName()); }
+                        System.out.println(" Акционные продукты: " + discountProduct.getProductName());
+                    }
                 }
             } else {
                 productName.setProductPrice(productPrice);
             }
 
 
-
+        }
     }
 }
 

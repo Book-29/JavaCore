@@ -7,19 +7,24 @@ public class DiscountProduct extends Product {
     private int discount;
     private Boolean isDiscount;
 
+    public DiscountProduct(String productName, int productPrice, int discount) {
+        super(productName, productPrice);
         this.discount = discount;
+
     }
 
     public void setDiscount(Boolean discount) {
         isDiscount = discount;
     }
 
-   public void setDiscount(int discount) {
-             System.out.println(" цена неправильная");
-         } else {
+    public void setDiscount(int discount) {
+        if (discount < 0 || discount == 0) {
+            System.out.println(" цена неправильная");
+        } else {
 
-             this.discount = discount;
-         }
+            this.discount = discount;
+
+        }
     }
 
     @Override
