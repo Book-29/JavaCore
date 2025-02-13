@@ -10,7 +10,7 @@ public class Car {
     private int acceleration;
     private int suspension;
     private int durability;
-    private boolean racing;
+    private boolean racing = false;
 
 
     public Car(String mark, int year, boolean racing) {
@@ -92,6 +92,9 @@ public class Car {
 
     public boolean isRacing() {
         return racing;
+    }
+    public String getRacing() {
+        return racing ? "участник гонки" : "не участник гонки";
     }
 
     public void setRacing(boolean racing) {
