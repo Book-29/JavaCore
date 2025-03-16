@@ -1,1 +1,1 @@
-f5a8a3cb_1|2023-12-25T19:10:11.556|noisemc_9900|789ghs_222|789ghs_222|Крылов|Иван|Павлович|26|true
+User{id='f5a8a3cb_1', date=2023-12-25T19:10:11.556, login='noisemc_9900', password='789ghs_222', confirmPassword='789ghs_222', surname='Крылов', name='Иван', patronymic='Павлович', age=26, isWorker=true}

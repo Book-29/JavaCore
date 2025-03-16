@@ -30,6 +30,24 @@ public class User {
     private int age;
     private boolean isWorker;
 
+public  User (String line) {
+    String[] userFields = line.split("[|]");
+    if (userFields.length >= 10) {
+        this.id = userFields[0].trim();
+        this.date = LocalDateTime.parse(userFields[1].trim());
+        this.login = userFields[2].trim();
+        this.password = userFields[3].trim();
+        this.confirmPassword = userFields[4].trim();
+        this.surname = userFields[5].trim();
+        this.name = userFields[6].trim();
+        this.patronymic = userFields[7].trim();
+        this.age = Integer.parseInt(userFields[8].trim());
+        this.isWorker = Boolean.parseBoolean(userFields[9].trim());
+
+    } else {
+        System.out.println("Ошибка в файле: некорректные данные пользователя");
+    }
+    }
 
     public User(String id, LocalDateTime date, String login, String password, String confirmPassword, String surname, String name, String patronymic, int age, boolean isWorker) {
         this.id = id;
@@ -206,5 +224,7 @@ public class User {
                 ", isWorker=" + isWorker +
                 '}';
     }
+
+
 }
 
