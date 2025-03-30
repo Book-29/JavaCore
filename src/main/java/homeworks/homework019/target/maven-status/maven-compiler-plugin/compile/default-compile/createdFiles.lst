@@ -1,0 +1,5 @@
+ru\innopolis\jpademo\repository\UsersRepository.class
+ru\innopolis\jpademo\model\Users.class
+ru\innopolis\jpademo\service\UsersService.class
+ru\innopolis\jpademo\model\Orders.class
+ru\innopolis\jpademo\Main.class
