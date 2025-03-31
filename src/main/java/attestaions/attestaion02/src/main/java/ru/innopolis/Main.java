@@ -28,7 +28,6 @@ public class Main {
     }
 @PostConstruct
     public void init(){
-    List<Users> user = usersService.getUsers();
-log.info("Пользователь {}",user);
+
     }
 }

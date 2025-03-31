@@ -12,7 +12,6 @@ import lombok.ToString;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-import javax.annotation.processing.Generated;
 
 
 @Getter
