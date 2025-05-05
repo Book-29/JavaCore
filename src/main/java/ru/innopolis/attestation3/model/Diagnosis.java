@@ -10,17 +10,21 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Table(name = "diagnosis")
+@Table(name = "diagnosis", schema = "public")
 public class Diagnosis {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "code",nullable = false)
     private String code;
+
+    @Column(name = "description",nullable = false)
     private String description;
 
-    @Column(name = "is_deleted")
-    private boolean isDeleted = false;
+    @Column(name = "is_deleted", columnDefinition = "boolean default false")
+    private boolean isDeleted;
 
 
 }

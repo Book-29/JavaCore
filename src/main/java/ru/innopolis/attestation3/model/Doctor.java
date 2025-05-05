@@ -12,14 +12,16 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Table(name = "doctor")
+@Table(name = "doctor", schema = "public")
 public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+@Column(name = "name", nullable = false)
     private String name;
+
+@Column(name = "specialization", nullable = false)
     private String specialization;
 
     @OneToMany(mappedBy = "doctor")

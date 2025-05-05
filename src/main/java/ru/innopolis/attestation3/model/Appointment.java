@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
-@Table(name = "appointments")
+@Table(name = "appointments", schema = "public")
 public class Appointment {
 
 

@@ -16,23 +16,27 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Table(name = "patients")
+@Table(name = "patients", schema = "public")
 public class Patient {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "address")
     private String address;
 
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "is_deleted")
-    private boolean isDeleted = false;
+    @Column(name = "is_deleted", columnDefinition = "boolean default false")
+    private boolean isDeleted;
 
-    @Column(name = "birth_date")
+    @Column(name = "birth_date", nullable = false)
     private LocalDate birthData;
 
     @OneToMany(mappedBy = "patient")
